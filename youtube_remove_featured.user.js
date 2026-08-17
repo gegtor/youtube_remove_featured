@@ -4,6 +4,7 @@
 // @version      1.0.0
 // @description  Removes "YouTube featured" promotional banners and shelves (e.g. YouTube Premium ads) from the YouTube homepage.
 // @author       gegtor
+// @license      MIT
 // @match        https://www.youtube.com/*
 // @match        https://m.youtube.com/*
 // @run-at       document-start
