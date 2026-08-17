@@ -10,6 +10,7 @@ UserScript for Tampermonkey or Greasemonkey that removes annoying youtube featur
 
 ![Example #1](img/1.png)
 ![Example #2](img/2.png)
+![Example #3](img/3.png)
 
 
 ## How it works
