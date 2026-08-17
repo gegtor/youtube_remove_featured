@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         YouTube Remove Featured Banners
 // @namespace    https://github.com/gegtor/youtube_remove_featured
-// @version      1.0.2
-// @description  Removes "YouTube featured" promotional banners and shelves (e.g. YouTube Premium ads) from the YouTube homepage.
+// @version      1.1.0
+// @description  Removes "YouTube featured" promotional banners and shelves (e.g. YouTube Premium ads) and the YouTube Playables shelf from the YouTube homepage.
 // @author       gegtor
 // @license      MIT
 // @match        https://www.youtube.com/*
@@ -58,6 +58,19 @@
             if (link) {
                 removeContainer(banners[k]);
             }
+        }
+
+        var shelves = document.querySelectorAll('ytd-rich-shelf-renderer');
+        for (var s = 0; s < shelves.length; s++) {
+            var playablesMarker = shelves[s].querySelector('a[href^="/playables"], ytd-mini-game-card-view-model, mini-game-card-view-model');
+            if (playablesMarker) {
+                removeContainer(shelves[s]);
+            }
+        }
+
+        var gameCards = document.querySelectorAll('ytd-mini-game-card-view-model, ytd-rich-item-renderer[is-mini-game-card-shelf]');
+        for (var g = 0; g < gameCards.length; g++) {
+            removeContainer(gameCards[g]);
         }
     }
 

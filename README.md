@@ -6,6 +6,7 @@ UserScript for Tampermonkey or Greasemonkey that removes annoying youtube featur
 
 - "YouTube featured" statement banners on the homepage (e.g. YouTube Premium promos)
 - "YouTube featured" brand shelves (e.g. the "Listen in the background with YouTube Premium" shelf)
+- YouTube Playables shelves (mini game cards on the homepage)
 
 ![Example #1](img/1.png)
 ![Example #2](img/2.png)
@@ -16,7 +17,8 @@ UserScript for Tampermonkey or Greasemonkey that removes annoying youtube featur
 YouTube marks promoted content with the `ytBadgeShapePromoted` badge class
 ("YouTube featured"). The script removes the section containing any such badge,
 and as a fallback also removes statement banners whose buttons link to
-`youtube.com/premium…`. A `MutationObserver` plus the `yt-navigate-finish` event
+`youtube.com/premium…`. Shelves linking to `/playables` or containing mini game
+cards are removed as well. A `MutationObserver` plus the `yt-navigate-finish` event
 keeps the page clean during navigation and infinite scrolling.
 
 ## Install
