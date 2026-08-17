@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Remove Featured Banners
 // @namespace    https://github.com/gegtor/youtube_remove_featured
-// @version      1.0.0
+// @version      1.0.2
 // @description  Removes "YouTube featured" promotional banners and shelves (e.g. YouTube Premium ads) from the YouTube homepage.
 // @author       gegtor
 // @license      MIT
